@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Гамбургеры</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 10px 40px;
+        }
+        label.radio,
+        label.checkbox {
+            font-weight: normal;
+        }
+        .result {
+            margin-top: 1em;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="hamburger">
+        <legend>Выберите гамбургер</legend>
+        <label>Размер</label>
+        <label class="radio">
+            <input type="radio" name="burgerSize" value="small" checked> Маленький
+        </label>
+        <label class="radio">
+            <input type="radio" name="burgerSize" value="large"> Большой
+        </label><br>
+        <label>Начинка</label>
+        <label class="radio">
+            <input type="radio" name="burgerStuffing" value="cheese" checked> Сыр
+        </label>
+        <label class="radio">
+            <input type="radio" name="burgerStuffing" value="salad"> Салат
+        </label>
+        <label class="radio">
+            <input type="radio" name="burgerStuffing" value="potato"> Картофель
+        </label><br>
+        <label>Верхушка</label>
+        <label class="checkbox">
+            <input type="checkbox" class="burgerTopping" name="burgerToppingMayo" value="mayo"> Майонез
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" class="burgerTopping" name="burgerToppingSpice" value="spice"> Приправа
+        </label>
+        <button type="button" class="calculate">Рассчитать</button>
+    </form>
+    <div class="result"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

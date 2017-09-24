@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <style>
+        .subMenu {
+            margin-left: 10px;
+            font-size: smaller;
+        }
+    </style>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            var menuItem1 = new MenuItem('/', 'Главная');
+            
+            var catalogItem1 = new MenuItem('/catalog/clothes', 'Одежда');
+            var catalogItem2 = new MenuItem('/catalog/shoes', 'Обувь');
+            var catalogItem3 = new MenuItem('/catalog/accessories', 'Аксессуары');
+            
+            var menuItem2 = new SubMenu('/catalog', 'Каталог', '', 'subMenu', [catalogItem1, catalogItem2, catalogItem3]);
+            var menuItem3 = new MenuItem('/blog', 'Блог');
+            var menuItem4 = new MenuItem('/left', 'Левый пункт');
+            menuItem4.remove();
+            var menuItem5 = new MenuItem('/right', 'Правый пункт');
+            
+            var menu = new Menu('menu', 'menu', [menuItem1, menuItem2, menuItem3, menuItem4, menuItem5]);
+            menuItem5.remove();
+            document.write(menu.render());
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
